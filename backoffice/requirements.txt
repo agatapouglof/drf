@@ -1,0 +1,3 @@
+#pipenv install -r requirements.txt
+psycopg2==2.8.2
+
