@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42cedc28-4bee-424c-ab5b-631224d507e1" name="Default Changelist" comment="" />
+    <list default="true" id="42cedc28-4bee-424c-ab5b-631224d507e1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/backend_gca.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/0002_gcacontact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/0003_gcaaffaire.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/0004_auto_20190416_1033.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/serialier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backoffice/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backoffice/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backoffice/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backoffice/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/requirements.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,39 +42,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backoffice/backend/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="283">
-              <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+              <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backoffice/backend/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backoffice/backend/serialier.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backoffice/backend/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -106,6 +127,9 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -125,6 +149,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -284,9 +309,15 @@
     <entry file="file://$PROJECT_DIR$/backoffice/backend/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
-          <caret line="73" column="33" lean-forward="true" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
