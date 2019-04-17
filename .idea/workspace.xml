@@ -2,37 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42cedc28-4bee-424c-ab5b-631224d507e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/backend_gca.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/0002_gcacontact.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/0003_gcaaffaire.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/0004_auto_20190416_1033.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/serialier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backend/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backoffice/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backoffice/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backoffice/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/backoffice/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backoffice/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backoffice/backend/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/backend/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/migrations/0002_gcacontact.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/migrations/0003_gcaaffaire.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/migrations/0004_auto_20190416_1033.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/backend/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/serialier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/backend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/backend/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backoffice/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/backoffice/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/backoffice/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backoffice/backoffice/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backoffice/requirements.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,32 +33,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backoffice/backend/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+            <state relative-caret-position="345">
+              <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backoffice/backend/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/share/virtualenvs/backend_gca-OIBO5_TM/lib/python3.7/site-packages/django/apps/registry.py">
+        <entry file="file://$PROJECT_DIR$/backoffice/backend/serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2415">
-              <caret line="170" selection-start-line="170" selection-end-line="170" />
+            <state relative-caret-position="150">
+              <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.local/share/virtualenvs/backend_gca-OIBO5_TM/lib/python3.7/site-packages/rest_auth/app_settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.local/share/virtualenvs/backend_gca-OIBO5_TM/lib/python3.7/site-packages/django/db/models/query.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="407" selection-start-line="407" selection-end-line="407" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backoffice/backend/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,37 +84,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backoffice/backend/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backoffice/backend/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backoffice/backend/apps.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backoffice/backoffice/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            <state relative-caret-position="315">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="e#634#666#0" expanded="true" />
               </folding>
@@ -119,13 +105,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backoffice/backoffice/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="418">
+              <caret line="100" column="31" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pipfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>AUTH_USER_MODEL</find>
+      <find>UserModel</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -133,18 +143,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backoffice/backoffice/settings.py" />
-        <option value="$PROJECT_DIR$/backoffice/backend/admin.py" />
-        <option value="$PROJECT_DIR$/backoffice/backend/serialier.py" />
-        <option value="$PROJECT_DIR$/backoffice/backoffice/urls.py" />
-        <option value="$PROJECT_DIR$/backoffice/backend/views.py" />
-        <option value="$PROJECT_DIR$/backoffice/backend/urls.py" />
         <option value="$PROJECT_DIR$/backoffice/backend/__init__.py" />
+        <option value="$PROJECT_DIR$/backoffice/backend/admin.py" />
         <option value="$PROJECT_DIR$/backoffice/backend/models.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/Pipfile" />
+        <option value="$PROJECT_DIR$/backoffice/backoffice/urls.py" />
+        <option value="$PROJECT_DIR$/backoffice/backend/serialier.py" />
+        <option value="$PROJECT_DIR$/backoffice/backend/urls.py" />
+        <option value="$PROJECT_DIR$/backoffice/backend/views.py" />
+        <option value="$PROJECT_DIR$/backoffice/backoffice/settings.py" />
+        <option value="$PROJECT_DIR$/backoffice/backend/serializer.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="1440" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
@@ -175,7 +189,9 @@
             </path>
             <path>
               <item name="backend_gca" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="backend_gca" type="462c0819:PsiDirectoryNode" />
+              <item name="backoffice" type="462c0819:PsiDirectoryNode" />
+              <item name="backoffice" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -214,12 +230,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16271722" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16271722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="DB Browser" order="3" />
+      <window_info id="DB Browser" order="3" weight="0.46445498" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -229,7 +246,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22772278" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.22772278" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -239,85 +256,154 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/backend_gca/backend_gca/settings.py" />
-    <entry file="file://$PROJECT_DIR$/backoffice/backend/serialier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/backoffice/backend/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/backoffice/backend/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/backoffice/backend/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/.local/share/virtualenvs/backend_gca-OIBO5_TM/lib/python3.7/site-packages/django/apps/registry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2415">
+        <state relative-caret-position="703">
           <caret line="170" selection-start-line="170" selection-end-line="170" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backoffice/backend/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/backoffice/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pipfile.lock">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/backoffice/backend/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        <state relative-caret-position="210">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="48" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backoffice/backend/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/backend_gca-OIBO5_TM/lib/python3.7/site-packages/rest_auth/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/backend/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/backend/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/backend_gca-OIBO5_TM/lib/python3.7/site-packages/django/db/models/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="407" selection-start-line="407" selection-end-line="407" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/backend/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/share/virtualenvs/backend_gca-OIBO5_TM/lib/python3.7/site-packages/rest_auth/app_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice/backend/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backoffice/backoffice/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        <state relative-caret-position="315">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
           <folding>
             <element signature="e#634#666#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backoffice/backoffice/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
+    <entry file="db://ade2ba36-b5ff-438b-80c8-a3a1f93af817/objects/schemas/public/tables/auth_user">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="0" readonly="false">
+          <columns>
+            <column name="id" position="0" visible="true" />
+            <column name="password" position="1" visible="true" />
+            <column name="last_login" position="2" visible="true" />
+            <column name="is_superuser" position="3" visible="true" />
+            <column name="username" position="4" visible="true" />
+            <column name="first_name" position="5" visible="true" />
+            <column name="last_name" position="6" visible="true" />
+            <column name="email" position="7" visible="true" />
+            <column name="is_staff" position="8" visible="true" />
+            <column name="is_active" position="9" visible="true" />
+            <column name="date_joined" position="10" visible="true" />
+            <column name="code" position="11" visible="true" />
+            <column name="job" position="12" visible="true" />
+            <column name="account" position="13" visible="true" />
+            <column name="rib" position="14" visible="true" />
+            <column name="daily_tax" position="15" visible="true" />
+            <column name="hourly_rate" position="16" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backoffice/backend/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backoffice/backend/models.py">
+    <entry file="file://$PROJECT_DIR$/backoffice/backoffice/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+        <state relative-caret-position="418">
+          <caret line="100" column="31" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pipfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

@@ -4,7 +4,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="124">
+          <list size="132">
             <item index="0" class="java.lang.String" itemvalue="greenlet" />
             <item index="1" class="java.lang.String" itemvalue="Babel" />
             <item index="2" class="java.lang.String" itemvalue="testpath" />
@@ -129,6 +129,14 @@
             <item index="121" class="java.lang.String" itemvalue="nbformat" />
             <item index="122" class="java.lang.String" itemvalue="ipython" />
             <item index="123" class="java.lang.String" itemvalue="packaging" />
+            <item index="124" class="java.lang.String" itemvalue="chardet" />
+            <item index="125" class="java.lang.String" itemvalue="requests-oauthlib" />
+            <item index="126" class="java.lang.String" itemvalue="django-rest-auth" />
+            <item index="127" class="java.lang.String" itemvalue="oauthlib" />
+            <item index="128" class="java.lang.String" itemvalue="defusedxml" />
+            <item index="129" class="java.lang.String" itemvalue="django-allauth" />
+            <item index="130" class="java.lang.String" itemvalue="requests" />
+            <item index="131" class="java.lang.String" itemvalue="python3-openid" />
           </list>
         </value>
       </option>

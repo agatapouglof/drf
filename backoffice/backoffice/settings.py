@@ -37,9 +37,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_auth.registration',
+    'rest_auth',
     'backend',
-    'rest_framework'
+    'rest_framework',
+    'rest_framework.authtoken',
+    'allauth',
+    'allauth.account',
+    'django.contrib.sites',
+
 ]
+AUTH_USER_MODEL = 'backend.GCAUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+
+    )
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,3 +141,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# For django-rest-auth
+REST_AUTH_SERIALIZERS = {
+    'TOKEN_SERIALIZER': 'backend.serializer.GCATokenSerializer',
+    'LOGIN_SERIALIZER': 'backend.serializer.GCALoginSerializer'
+
+
+}
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'backend.serializer.GCARegisterSerializer',
+
+}
+
+ALLAUTH = {
+    'ACCOUNT_AUTHENTICATION_METHOD': 'USERNAME'
+}

@@ -1,7 +1,33 @@
 from django.db import models
-
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
+
+
+#Gestion user
+
+class GCAUser(AbstractUser):
+
+    FONCTION_CHOICES = (
+        ('ass', 'Associé'),
+        ('col', 'Collaborateur'),
+        ('con', 'Consultant'),
+        ('sec', 'Sécrétaire'),
+        ('sta', 'Stagiaire'),
+    )
+
+    code = models.CharField(max_length=45, default="")
+    job = models.CharField(max_length=45, choices=FONCTION_CHOICES)
+    account = models.CharField(max_length=254, default="")
+    rib = models.CharField(max_length=254, default="")
+    daily_tax = models.FloatField(default=0, help_text="Taux journalier")
+    hourly_rate = models.FloatField(default=0, help_text="Taux heure")
+
+    class Meta:
+        db_table = "auth_user"
+
+    def __str__(self):
+        return self.email
 
 
 class GCAClient(models.Model):
@@ -19,8 +45,8 @@ class GCAClient(models.Model):
         verbose_name_plural = "Clients"
         # ordering = [""]
 
-    def __str__(self):
-        return self.label
+        def __str__(self):
+            return self.label
 
 
 class GCAContact(models.Model):
@@ -54,8 +80,8 @@ class GCAContact(models.Model):
         verbose_name = "Contact"
         verbose_name_plural = "Contacts"
 
-    def __str__(self):
-        return self.name
+        def __str__(self):
+            return self.name
 
 
 # class GCAUser(models.Model):
@@ -63,7 +89,6 @@ class GCAContact(models.Model):
 #     login = models.CharField(max_length=254)
 #     password = models.CharField(max_length=45)
 #     is_admin = models.BooleanField(default=False)
-
 
 class GCAAffaire(models.Model):
 
@@ -90,8 +115,8 @@ class GCAAffaire(models.Model):
         verbose_name = "Affaire"
         verbose_name_plural = "Affaires"
 
-    def __str__(self):
-        return self.number_case
+        def __str__(self):
+            return self.number_case
 
 
 
