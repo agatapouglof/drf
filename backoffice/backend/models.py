@@ -107,8 +107,8 @@ class GCAAffaire(models.Model):
     place = models.CharField(max_length=254, default="", help_text="Lieu")
     nature = models.CharField(max_length=45, choices=NATURE_CHOICE, default="")
     comment = models.TextField(default="")
-    date_open = models.DateTimeField()
-    date_end = models.DateTimeField()
+    date_open = models.DateField()
+    date_end = models.DateField(null=True, blank=True)
 
     class Meta:
         db_table = "affaire"

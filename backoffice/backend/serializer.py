@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, get_user_model
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
-from .models import GCAAffaire, GCAUser
+from .models import GCAAffaire, GCAUser, GCAContact
 from django.core.exceptions import ObjectDoesNotExist
 from rest_auth.serializers import TokenSerializer, TokenModel, LoginSerializer
 from rest_auth.registration.serializers import RegisterSerializer
@@ -19,6 +19,7 @@ class GCAAffaireSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = GCAAffaire
+        date_end = serializers.DateField(required=False)
         fields = "__all__"
 
 
@@ -27,6 +28,13 @@ class GCAUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = GCAUser
         fields = ('email', 'username', 'code', 'job', 'account', 'rib', 'daily_tax', 'hourly_rate', "password")
+
+
+class GCAContactSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = GCAContact
+        fields = "__all__"
 
 
 class GCATokenSerializer(TokenSerializer):
