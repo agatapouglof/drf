@@ -12,6 +12,7 @@ psycopg2 = "*"
 django-rest-auth = "*"
 django-allauth = "*"
 requirements-txt = "*"
+djangorestframework-simplejwt = "*"
 
 [requires]
 python_version = "3.7"

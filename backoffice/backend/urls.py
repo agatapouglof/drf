@@ -4,6 +4,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
 
 app_name = "backend"
 router = DefaultRouter()
@@ -13,8 +15,11 @@ urlpatterns = [
     path('users/', views.GCAUserList.as_view(), name='users'),
     path('rest-auth/login/', views.GCALoginView.as_view(), name='login'),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
-    path('rest-auth/', include('rest_auth.urls')),
+    # path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/', include('rest_framework.urls')),
     path('test/', views.test_request),
+    path('token/', TokenObtainPairView.as_view()),
+    path('token/refresh/', TokenRefreshView.as_view),
 
 ]
 
