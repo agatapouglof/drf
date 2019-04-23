@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'django.contrib.sites',
+    'corsheaders',
 
 ]
 AUTH_USER_MODEL = 'backend.GCAUser'
@@ -73,6 +74,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backoffice.urls'
@@ -165,3 +167,12 @@ REST_AUTH_REGISTER_SERIALIZERS = {
 ALLAUTH = {
     'ACCOUNT_AUTHENTICATION_METHOD': 'USERNAME'
 }
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+# CORS_ORIGIN_WHITELIST = (
+#     'localhost:3030',
+# )
+# CORS_ORIGIN_REGEX_WHITELIST = (
+#     'localhost:3030',
+# )
