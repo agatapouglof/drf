@@ -12,14 +12,27 @@ class GCAAffaireList(generics.ListCreateAPIView):
     queryset = GCAAffaire.objects.all()
     serializer_class = GCAAffaireSerializer
 
+class GCAAffaireSingleView(generics.RetrieveUpdateDestroyAPIView):
+
+    queryset = GCAAffaire.objects.all()
+    serializer_class = GCAAffaireSerializer
+
 
 class GCAContactList(generics.ListCreateAPIView):
     queryset = GCAContact.objects.all()
     serializer_class = GCAContactSerializer
 
+class GCAContactSingleView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = GCAContact.objects.all()
+    serializer_class = GCAContactSerializer
 
-class GCAUserList(generics.ListAPIView):
 
+class GCAUserList(generics.ListCreateAPIView):
+
+    queryset = GCAUser.objects.all()
+    serializer_class = GCAUserSerializer
+
+class GCAUserSingleview(generics.RetrieveUpdateDestroyAPIView):
     queryset = GCAUser.objects.all()
     serializer_class = GCAUserSerializer
 
@@ -36,5 +49,3 @@ class GCALoginView(LoginView):
         mydata = {"status": "success"}
         orginal_response.data.update(mydata)
         return orginal_response
-
-

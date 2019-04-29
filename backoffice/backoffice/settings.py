@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'django.contrib.sites',
     'corsheaders',
 
@@ -59,8 +60,8 @@ AUTH_USER_MODEL = 'backend.GCAUser'
 # }
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',),
-    'DEFAULT_AUTHENTICATION_CLASSES' : ('rest_framework_simplejwt.authentication.JWTAuthentication',)
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
+    'DEFAULT_AUTHENTICATION_CLASSES' : ('rest_framework_simplejwt.authentication.JWTAuthentication',),
 
 }
 
@@ -70,12 +71,12 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backoffice.urls'
@@ -117,21 +118,21 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
-]
-
+# AUTH_PASSWORD_VALIDATORS = [
+#     {
+#         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+#     },
+#     {
+#         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+#     },
+# ]
+#
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -153,30 +154,55 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # For django-rest-auth
-REST_AUTH_SERIALIZERS = {
-    'TOKEN_SERIALIZER': 'backend.serializer.GCATokenSerializer',
-    'LOGIN_SERIALIZER': 'backend.serializer.GCALoginSerializer'
-
-
-}
-
-REST_AUTH_REGISTER_SERIALIZERS = {
-    'REGISTER_SERIALIZER': 'backend.serializer.GCARegisterSerializer',
-
-}
-
-ALLAUTH = {
-    'ACCOUNT_AUTHENTICATION_METHOD': 'USERNAME'
-}
+# REST_AUTH_SERIALIZERS = {
+#     'TOKEN_SERIALIZER': 'backend.serializer.GCATokenSerializer',
+#     'LOGIN_SERIALIZER': 'backend.serializer.GCALoginSerializer'
+#
+#
+# }
+#
+# REST_AUTH_REGISTER_SERIALIZERS = {
+#     'REGISTER_SERIALIZER': 'backend.serializer.GCARegisterSerializer',
+#
+# }
+#
+# ALLAUTH = {
+#     'ACCOUNT_AUTHENTICATION_METHOD': 'USERNAME'
+# }
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
-# CORS_ORIGIN_WHITELIST = (
-#     'localhost:3030',
-# )
+ALLOWED_HOSTS = ["127.0.0.1","localhost", ]
+CORS_ORIGIN_WHITELIST = (
+"127.0.0.1:4200",
+"localhost:4200",
+)
+
+
 # CORS_ORIGIN_REGEX_WHITELIST = (
-#     'localhost:3030',
+#     'localhost:4200',
 # )
+
+CORS_ALLOW_METHODS = (
+'DELETE',
+'GET',
+'OPTIONS',
+'PATCH',
+'POST',
+'PUT',)
+
+
+CORS_ALLOW_HEADERS = (
+'accept',
+'accept-encoding',
+'authorization',
+'content-type',
+'dnt',
+'origin',
+'user-agent',
+'x-csrftoken',
+'x-requested-with',
+'Access-Control-Allow-Origin',)
 
 JWT_AUTH = {
     # how long the original token is valid for

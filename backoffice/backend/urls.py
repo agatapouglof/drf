@@ -11,8 +11,11 @@ app_name = "backend"
 router = DefaultRouter()
 urlpatterns = [
     path('affaires/', views.GCAAffaireList.as_view(), name='affaires'),
-    path('contacts/', views.GCAContactList.as_view(), name='affaires'),
+    path('contacts/', views.GCAContactList.as_view(), name='contacts'),
     path('users/', views.GCAUserList.as_view(), name='users'),
+    path('affaires/<int:pk>', views.GCAAffaireSingleView.as_view()),
+    path('contacts/<int:pk>', views.GCAContactSingleView.as_view()),
+    path('users/<int:pk>', views.GCAUserSingleview.as_view()),
     path('rest-auth/login/', views.GCALoginView.as_view(), name='login'),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     # path('rest-auth/', include('rest_auth.urls')),

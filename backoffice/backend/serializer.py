@@ -27,7 +27,8 @@ class GCAUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = GCAUser
-        fields = ('email', 'username', 'code', 'job', 'account', 'rib', 'daily_tax', 'hourly_rate', "password")
+        # fields = ('email', 'username', 'code', 'job', 'account', 'rib', 'daily_tax', 'hourly_rate', "password")
+        fields = "__all__"
 
 
 class GCAContactSerializer(serializers.ModelSerializer):
@@ -190,4 +191,3 @@ class GCARegisterSerializer(RegisterSerializer):
         #     data_dict = super().get_cleaned_data()
         #     data_dict['code'] = self.validated_data.get('code', '')
         #     return data_dict
-

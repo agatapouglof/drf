@@ -26,6 +26,9 @@ class GCAUser(AbstractUser):
     class Meta:
         db_table = "auth_user"
 
+    # def create(self):
+    #     AbstractUser.objects.create_user
+
     def __str__(self):
         return self.email
 
@@ -84,11 +87,6 @@ class GCAContact(models.Model):
             return self.name
 
 
-# class GCAUser(models.Model):
-#     id = models.AutoField(primary_key=True)
-#     login = models.CharField(max_length=254)
-#     password = models.CharField(max_length=45)
-#     is_admin = models.BooleanField(default=False)
 
 class GCAAffaire(models.Model):
 
@@ -117,6 +115,3 @@ class GCAAffaire(models.Model):
 
         def __str__(self):
             return self.number_case
-
-
-
