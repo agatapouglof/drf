@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# 'backend.apps.BackendConfig',
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_auth.registration',
     'rest_auth',
-    'backend',
     'rest_framework',
     'rest_framework.authtoken',
     'allauth',
@@ -48,8 +48,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django.contrib.sites',
     'corsheaders',
+    'backend',
 
 ]
+SITE_ID=1
 AUTH_USER_MODEL = 'backend.GCAUser'
 
 # REST_FRAMEWORK = {
@@ -62,6 +64,7 @@ AUTH_USER_MODEL = 'backend.GCAUser'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
     'DEFAULT_AUTHENTICATION_CLASSES' : ('rest_framework_simplejwt.authentication.JWTAuthentication',),
+    'UNAUTHENTICATED_USER': None,
 
 }
 
@@ -73,7 +76,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -161,11 +164,14 @@ STATIC_URL = '/static/'
 #
 # }
 #
-# REST_AUTH_REGISTER_SERIALIZERS = {
-#     'REGISTER_SERIALIZER': 'backend.serializer.GCARegisterSerializer',
-#
-# }
-#
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'backend.serializer.CustomRegisterSerializer',
+
+}
+
+REST_AUTH_SERIALIZERS = {
+    "USER_DETAILS_SERIALIZER": "backend.serializer.CustomUserDetailsSerializer",
+}
 # ALLAUTH = {
 #     'ACCOUNT_AUTHENTICATION_METHOD': 'USERNAME'
 # }
@@ -215,3 +221,12 @@ JWT_AUTH = {
     # it can be refreshed.  exprired tokens can't be refreshed.
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
 }
+
+
+# Add fields to default user
+ACCOUNT_USER_MODEL_USERNAME_FIELD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_VERIFICATION = "none"

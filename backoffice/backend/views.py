@@ -6,6 +6,8 @@ from rest_framework.response import Response
 from .models import GCAAffaire, GCAUser, GCAContact
 from .serializer import GCAAffaireSerializer, GCAUserSerializer, GCAContactSerializer
 
+from rest_auth.registration.views import RegisterView
+
 
 class GCAAffaireList(generics.ListCreateAPIView):
 
@@ -42,10 +44,14 @@ def test_request(request, fornat=None):
     print("get the data in test daniel")
     return Response('test')
 
-class GCALoginView(LoginView):
+# class GCALoginView(LoginView):
+#
+#     def get_response(self):
+#         orginal_response = super().get_response()
+#         mydata = {"status": "success"}
+#         orginal_response.data.update(mydata)
+#         return orginal_response
 
-    def get_response(self):
-        orginal_response = super().get_response()
-        mydata = {"status": "success"}
-        orginal_response.data.update(mydata)
-        return orginal_response
+
+class CustomRegisterView(RegisterView):
+    queryset = GCAUser.objects.all()

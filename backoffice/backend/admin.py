@@ -12,6 +12,8 @@ admin.site.register(GCAContact)
 
 class GCAUserAdmin(UserAdmin):
     model = GCAUser
-    list_display = ['email', 'username', 'code']
+    # list_display = ['email', 'username', 'code']
+    list_display = ['email', 'code']
 
-admin.site.register(GCAUser, GCAUserAdmin)
+# admin.site.register(GCAUser, GCAUserAdmin)
+admin.site.register(GCAUser)

@@ -16,7 +16,7 @@ urlpatterns = [
     path('affaires/<int:pk>', views.GCAAffaireSingleView.as_view()),
     path('contacts/<int:pk>', views.GCAContactSingleView.as_view()),
     path('users/<int:pk>', views.GCAUserSingleview.as_view()),
-    path('rest-auth/login/', views.GCALoginView.as_view(), name='login'),
+    # path('rest-auth/login/', views.GCALoginView.as_view(), name='login'),
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     # path('rest-auth/', include('rest_auth.urls')),
     path('rest-auth/', include('rest_framework.urls')),
