@@ -253,19 +253,51 @@ class GCATokenSerializer(TokenSerializer):
 
 class CustomRegisterSerializer(RegisterSerializer):
 
+    FONCTION_CHOICES = (
+        ('ass', 'Associé'),
+        ('col', 'Collaborateur'),
+        ('con', 'Consultant'),
+        ('sec', 'Sécrétaire'),
+        ('sta', 'Stagiaire'),
+    )
+
     email = serializers.EmailField(required=True)
     password1 = serializers.CharField(write_only=True)
-    # name = serializers.CharField(required=True)
-    # date_of_birth = serializers.DateField(required=True)
+    first_name = serializers.CharField(required=True)
+    last_name = serializers.CharField(required=True)
+    code = serializers.CharField(required=True)
+    daily_tax = serializers.FloatField()
+    job = serializers.CharField(required=True)
+
+
 
     def get_cleaned_data(self):
         super(CustomRegisterSerializer, self).get_cleaned_data()
-        # super(RegisterSerializer, self).get_cleaned_data()
-
+        # 'username': self.validated_data.get('username', ''),
+        print(self.validated_data.get('code'))
         return {
             'password1': self.validated_data.get('password1', ''),
             'email': self.validated_data.get('email', ''),
+            'last_name': self.validated_data.get('last_name', ''),
+            'first_name': self.validated_data.get('first_name', ''),
+            'job': self.validated_data.get('job', ''),
+            'code': self.validated_data.get('code', ''),
+            'daily_tax': self.validated_data.get('daily_tax', 0),
         }
+    # to save new fields in user registration
+    def save(self, request):
+        adapter = get_adapter()
+        user = adapter.new_user(request)
+        self.cleaned_data = self.get_cleaned_data()
+        adapter.save_user(request, user, self)
+        setup_user_email(request, user, [])
+
+        user.job = self.cleaned_data.get('job')
+        user.code = self.cleaned_data.get('code')
+        user.daily_tax = self.cleaned_data.get('daily_tax')
+
+        user.save()
+        return user
 
 
 class CustomUserDetailsSerializer(serializers.ModelSerializer):
