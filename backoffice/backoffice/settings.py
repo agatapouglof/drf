@@ -106,13 +106,23 @@ WSGI_APPLICATION = 'backoffice.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'gest_ca',
+#         'USER': 'admin',
+#         'PASSWORD': 'admin',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gest_ca',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'NAME': 'mqkequeu',
+        'USER': 'mqkequeu',
+        'PASSWORD': 'uM8PA7mLiomx9C8VW5kv1vVYVGx75EE0',
+        'HOST': 'isilo.db.elephantsql.com',
         'PORT': '5432',
     }
 }
