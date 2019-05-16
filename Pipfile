@@ -8,11 +8,11 @@ verify_ssl = true
 [packages]
 django = "*"
 djangorestframework = "*"
-psycopg2 = "*"
+psycopg2-binary = "*"
 django-rest-auth = "*"
 django-allauth = "*"
 djangorestframework-simplejwt = "*"
 django-cors-headers = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"
